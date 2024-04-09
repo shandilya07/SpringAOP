@@ -9,6 +9,7 @@ public class Runner {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
         var restaurantService = context.getBean(RestaurantService.class);
         restaurantService.cookFood(true);
-        restaurantService.serveFood(false);
+        //restaurantService.serveFood(true);
+        System.out.println(restaurantService.generateBill("12.34"));
     }
 }
